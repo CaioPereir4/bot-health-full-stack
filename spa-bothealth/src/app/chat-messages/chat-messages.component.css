@@ -1,0 +1,78 @@
+.messages-container {
+    max-height: 500px; 
+    overflow-y: auto;
+    min-width: 40vw;
+    scroll-behavior: smooth;
+  }
+  
+
+  .messages-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .messages-container::-webkit-scrollbar-thumb {
+    background-color: #b0c4de;
+    border-radius: 10px;
+  }
+  
+  .messages-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+  }
+  
+
+  .bot-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+  }
+  
+  .user-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: justify;
+  }
+  
+  .message-bubble {
+    max-width: 60%;
+    padding: 10px;
+    
+    background-color: #e5f1fb; 
+    position: relative;
+    margin: 5px;
+  }
+  
+  .bot-message .message-bubble {
+    background-color: #fff;
+    border-radius: 20px 20px 20px 5px;
+  }
+  
+  .user-message .message-bubble {
+    background-color: #dcf8c6; 
+    border-radius: 20px 20px 5px 20px;
+  }
+  
+
+  .message-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #b0c4de;
+    margin-left: 8px;
+  }
+  
+  .bot-icon {
+    order: -1; 
+  }
+  
+  .user-icon {
+    order: 1; 
+  }
+  
+  .message-bubble p {
+    margin: 1px;
+    color: #333;
+  }
+  

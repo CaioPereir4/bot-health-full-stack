@@ -1,0 +1,102 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+<div class="flex flex-col bg-gray-200 overflow-hidden">
+  <main class="flex flex-col items-center justify-center flex-1 p-6">
+    <div
+      class="w-full h-96 max-w-2xl bg-gray-250 rounded-lg shadow-md p-6 flex flex-col items-center text-center"
+    >
+
+    <header class="flex items-center justify-between w-full mb-6 relative">
+      <div class="flex items-center">
+        <img
+          src="../../assets/bot_image_white_background_v2.png"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full border-2 border-blue-500 mr-4"
+        />
+        <h2 class="text-xl font-semibold text-gray-800">Dr. Botinho</h2>
+      </div>
+      <button
+        class="absolute top-0 right-0 mt-2 mr-2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow flex items-center justify-center"
+        (click)="finishSession()"
+      >
+        <i class="fas fa-sync-alt"></i>
+      </button>
+    </header>
+
+
+      <div *ngIf="isToShowInitialMessage">
+        <h1 class="text-2xl font-semibold text-gray-800 mb-10">
+          Como posso te ajudar?
+        </h1>
+        <div class="flex gap-4 w-full">
+          <div
+            class=" p-4 border-b font-medium border-b-blue-500 rounded-md text-gray-700 flex-1"
+          >
+            <p>
+              Posso ajudá-lo com dúvidas sobre o estado de saúde do seu
+              paciente.
+            </p>
+          </div>
+          <div
+            class=" p-4 border-b font-medium border-b-blue-500 rounded-md text-gray-700 flex-1"
+          >
+            <p>
+              Posso ajudá-lo a recomendar medicamentos de acordo com o estado de
+              saúde do seu paciente.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="!isToShowInitialMessage" class="messages-container">
+        <div *ngFor="let message of allMessages" 
+             [ngClass]="{'bot-message': message.isBot, 'user-message': !message.isBot}">
+          <div class="message-bubble">
+            <p class="font-medium">{{ message.text }}</p>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+
+    <div
+      class="w-full max-w-2xl bg-white rounded-lg shadow-md p-4 flex items-center space-x-2 mt-6"
+    >
+      <textarea
+        id="user-input"
+        class="w-full bg-gray-100 border border-gray-300 rounded-md p-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+        rows="2"
+        placeholder="Digite sua mensagem aqui..."
+      ></textarea>
+      <button
+        (click)="sendMessage()"
+        id="send-message"
+        class="bg-gray-300 text-white p-2 rounded-full hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <svg
+          class="w-6 h-6 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <p
+      *ngIf="isInvalidMessage"
+      class="p-4 inline border-b font-medium text-red-700"
+    >
+      Não tente enviar mensagens vazias.
+    </p>
+  </main>
+</div>

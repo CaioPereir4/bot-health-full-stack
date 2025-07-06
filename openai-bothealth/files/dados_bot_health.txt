@@ -1,0 +1,7 @@
+## Dados do BotHealth
+
+**Nome da plataforma:** BotHealth
+
+**Slogan:** "Saúde em primeiro lugar."
+
+**Descrição do E-commerce:** O BotHealth é uma plataforma auxilar para ajudar médicos a atender melhor seus clientes, seu intuito é enviar dicas para o médico sobre os possíveis problemas do seu paciente, enviar também dicas do que o médico precisa fazer dado uma situação passada.
