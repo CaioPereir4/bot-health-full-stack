@@ -38,4 +38,12 @@ const User = database.define(
     }
 );
 
+
+database.sync({force: false}).then(() => {
+    console.log('Tables have been created!');
+  })
+  .catch((error) => {
+    console.error('Error creating tables:', error);
+  });
+
 module.exports = User;
