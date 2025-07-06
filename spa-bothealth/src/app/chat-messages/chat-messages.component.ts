@@ -12,6 +12,8 @@ import { GenericResponseModel } from "../models/genericResponse.model";
 export class ChatMessagesComponent implements OnInit, AfterViewChecked {
     public isInvalidMessage: boolean = false;
     public isToShowInitialMessage: boolean = true;
+    public isTextAreaDibled: boolean = false;
+
     @Input() userId !: number;
 
     constructor(private chatMessagesService: ChatMessagesService){}
@@ -30,8 +32,9 @@ export class ChatMessagesComponent implements OnInit, AfterViewChecked {
                 };
         });
 
-        document.querySelector("#user-input").addEventListener('keypress', (input) => {
-            if(input["key"] === 'Enter'){
+        document.querySelector("#user-input").addEventListener('keypress', (event) => {
+            if(event["key"] === 'Enter'){
+                event.preventDefault();
                 this.sendMessage();
             };
         });
@@ -49,6 +52,7 @@ export class ChatMessagesComponent implements OnInit, AfterViewChecked {
             this.isInvalidMessage = false;
             this.addThreeDotsInInterface(message);
             textArea["value"] = "";
+            this.isTextAreaDibled = true;
             this.chatMessagesService.sendMessage(this.userId, message)
                 .subscribe( (response: GenericResponseModel) => {
                     const messages = response.result["messages"];
@@ -56,6 +60,7 @@ export class ChatMessagesComponent implements OnInit, AfterViewChecked {
                         this.allMessages = messages;
                         this.isToShowInitialMessage = false;
                         this.scrollToBottom();
+                        this.isTextAreaDibled = false;
                     };
             })
         };
