@@ -1,60 +1,52 @@
-<h1 align="center">Backend Python do Botinho.</h1>
+<h1 align="center">Botinho's Python Backend.</h1>
 
-<p align="center">Servidor Backend desenvolvido em Python e Flask. Realiza integração com a Api da OpenAI, gerenciando o modelo do LLM. Mapea e trata as resposta da OpenAI.</p>
+<p align="center">Backend server developed in Python and Flask. It integrates with the OpenAI API, managing the LLM model. It maps and handles OpenAI's responses.</p>
 
-Tabela de conteúdos
+Table of Contents
 =================
 <!--ts-->
-   * [Instalação](#instalacao)  <!-- Link correto para seção de instalação -->
-   * [Como usar](#como-usar)
-   * [Tecnologias](#tecnologias)
+   * [Installation](#installation)  <!-- Correct link to installation section -->
+   * [How to Use](#how-to-use)
+   * [Technologies](#technologies)
 <!--te-->
 
 <h4 align="center"> 
-	 Status: Finalizado  🚀 
+	 Status: Completed 🚀 
 </h4>
 
 ### Features
 
-- [x] Conexão com a Api da OpenAI.
-- [x] Gerenciar gpt-4.
-- [x] Enviar mensagem para o assitente.
-- [x] Mapear e tratar respostas.
+- [x] Connection with the OpenAI API.
+- [x] Manage GPT-4.
+- [x] Send messages to the assistant.
+- [x] Map and handle responses.
 
-<a id="instalacao"></a>
-### Instalação
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Python](https://www.python.org/downloads/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+<a id="installation"></a>
+### Installation
+Before starting, you need to have the following tools installed on your machine:
+[Git](https://git-scm.com), [Python](https://www.python.org/downloads/).  
+It's also recommended to use a code editor such as [VSCode](https://code.visualstudio.com/)
 
-<a id="como-usar"></a>
-### 🎲 Rodando o backend Python
+<a id="how-to-use"></a>
+### 🎲 Running the Python Backend
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone <https://github.com/CaioPereir4/openai-bothealth.git>
 
-# Acesse a pasta do projeto no terminal/cmd
+# Navigate to the project folder in the terminal/cmd
 $ cd openai-bothealth/
 
-# Instale as dependências
+# Install dependencies
 $ pip install
 
-#Ajuste as variáveis de ambiente
+# Set environment variables
 
-- Crie o arquivo ".env" na raíz da aplicação.
-- Adicione a variável "OPENAI_API_KEY", passe como valor sua Api-Key da OpenAI.
-- Adicione a variável "ASSISTENT_ID", passe como valor o Id do Assistente criado no PlayGround da OpenAI.
+- Create a ".env" file in the root of the application.
+- Add the variable "OPENAI_API_KEY" and set your OpenAI API key as the value.
+- Add the variable "ASSISTENT_ID" and set the ID of the Assistant created in OpenAI's Playground as the value.
 
-
-# Execute a aplicação
+# Run the application
 $ python app.py
 
-# O servidor inciará na porta:5000 - acesse <http://localhost:5000/opeani-bothealth>
-```
-<a id="tecnologias"></a>
-### 🛠 Tecnologias
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- [Python](https://www.python.org/downloads/)
-- [Flask](https://flask.palletsprojects.com/en/stable/)
+# The server will start on port:5000 - access <http://localhost:5000/openai-bothealth>
