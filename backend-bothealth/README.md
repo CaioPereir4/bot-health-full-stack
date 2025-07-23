@@ -1,54 +1,47 @@
-<h1 align="center">Backend Node do Botinho.</h1>
+<h1 align="center">Botinho's Node Backend.</h1>
 
-<p align="center">Servidor backend desenvolvido em Node.js e Javascript. Responsável por gerenciar regras de negócio através de conexão com banco de dados.</p>
+<p align="center">Backend server developed using Node.js and JavaScript. Responsible for managing business rules through a database connection.</p>
 
-Tabela de conteúdos
+Table of Contents
 =================
 <!--ts-->
-   * [Instalação](#instalacao)  <!-- Link correto para seção de instalação -->
-   * [Como usar](#como-usar)
-   * [Tecnologias](#tecnologias)
+   * [Installation](#installation)  <!-- Correct link to installation section -->
+   * [How to Use](#how-to-use)
+   * [Technologies](#technologies)
 <!--te-->
 
 <h4 align="center"> 
-	 Status: Finalizado  🚀 
+	 Status: Completed 🚀 
 </h4>
 
 ### Features
 
-- [x] Cadastro de usuário.
-- [x] Login do usuário.
-- [x] Enviar mensagem para o bot.
-- [x] Salvar histórico da conversa.
-- [x] Reset de histórico.
+- [x] User registration.
+- [x] User login.
+- [x] Send messages to the bot.
+- [x] Save conversation history.
+- [x] Reset history.
 
-<a id="instalacao"></a>
-### Instalação
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [PostgreSql](https://www.postgresql.org/download/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+<a id="installation"></a>
+### Installation
+Before starting, make sure you have the following tools installed on your machine:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [PostgreSql](https://www.postgresql.org/download/).  
+It's also recommended to use a code editor such as [VSCode](https://code.visualstudio.com/)
 
-<a id="como-usar"></a>
-### 🎲 Rodando o backend
+<a id="how-to-use"></a>
+### 🎲 Running the Backend
 
 ```bash
-# Clone este repositório
+# Clone this repository
 $ git clone <https://github.com/CaioPereir4/backend-bothealth.git>
 
-# Acesse a pasta do projeto no terminal/cmd
+# Navigate to the project folder in your terminal/cmd
 $ cd backend-bothealth/
 
-# Instale as dependências
+# Install dependencies
 $ npm install
 
-# Execute a aplicação
+# Run the application
 $ npm run start
 
-# O servidor inciará na porta:8080 - acesse <http://localhost:8080/backend-bothealth>
-```
-<a id="tecnologias"></a>
-### 🛠 Tecnologias
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- [Node.js](https://nodejs.org/en/download)
-- [PostgreSql](https://www.postgresql.org/download/)
+# The server will start on port:8080 - access <http://localhost:8080/backend-bothealth>
